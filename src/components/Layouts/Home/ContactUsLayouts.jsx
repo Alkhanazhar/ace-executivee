@@ -1,13 +1,13 @@
-import { ArrowRight } from "lucide-react";
+import { Phone } from "lucide-react";
 import { useState } from "react";
 
 const ContactUsLayouts = () => {
-   const [hover, setHover] = useState(true);
-    const handleMouseOver = () => {
-      setHover((prev) => {
-        return !prev;
-      });
-    };
+  const [hover, setHover] = useState(true);
+  const handleMouseOver = () => {
+    setHover((prev) => {
+      return !prev;
+    });
+  };
   return (
     <section
       className="pt-24 transition-all callback duration-400 dark:bg-gray-900"
@@ -35,18 +35,14 @@ const ContactUsLayouts = () => {
               itaque eaque cumque libero dignissimos aut maiores odit commodi
               aspernatur expedita.
             </p>
-            <button
-              onMouseOver={handleMouseOver}
-              onMouseLeave={handleMouseOver}
-              className="bg-primaryColor text-white px-8 py-3 rounded-full font-semibold flex items-center mx-auto hover:bg-primaryColor/80 transition-colors"
+            <a
+              rel="noreferrer"
+              href="https://wa.me/+447872002283?text=Hello%20there!"
+              target="_blank"
+              className="w-fit bg-primaryColor text-white px-4 py-3  text-base rounded-full font-semibold flex items-center mx-auto hover:bg-primaryColor/80 transition-colors"
             >
-              Call Now
-              <ArrowRight
-                className={`h-5 w-5  duration-300 transition-all ${
-                  hover ? "ml-2" : "ml-5"
-                }`}
-              />
-            </button>
+              Call Now <Phone size={16} className="ml-2" />
+            </a>
           </div>
         </div>
       </div>

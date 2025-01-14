@@ -54,16 +54,15 @@ export const navItems = [
 
 export const footerContentList1 = [
   { title: "About", url: "/" },
-  { title: "Press release", url: "/" },
   { title: "Environment", url: "/" },
   { title: "Privacy policy", url: "/" },
 ];
 
 export const footerContentList2 = [
-  { title: "Lift tickets", url: "/" },
-  { title: "Season passes", url: "/" },
-  { title: "Vacations package", url: "/" },
-  { title: "Best trips", url: "/" },
+  { title: "Airport Transfers", url: "/" },
+  { title: "Luxurious Shopping Trips", url: "/" },
+  { title: "Event Transfers", url: "/" },
+  { title: "Award Ceremonies", url: "/" },
 ];
 
 export const urlStaticProfileImage =

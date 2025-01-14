@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import useColorMode from "../../../hooks/useColorMode";
 
 import { brandName } from "../../../utils/Constants";
-import { ArrowRight, Moon, Phone, Sun } from "lucide-react";
+import { Moon, Phone, Sun } from "lucide-react";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -101,11 +101,12 @@ const Navbar = () => {
             {colorMode === "light" ? <Moon /> : <Sun />}
           </div>
           <a
-            href="https://wa.me/07872002283?text=Hello%20there!"
+            rel="noreferrer"
+            href="https://wa.me/+447872002283?text=Hello%20there!"
             target="_blank"
             className="bg-primaryColor text-white px-4 py-2 text-sm rounded-full font-semibold flex items-center mx-auto hover:bg-primaryColor/80 transition-colors"
           >
-            Book Now <Phone size={16} className="ml-2" />
+            Call Now <Phone size={16} className="ml-2" />
           </a>
         </div>
 

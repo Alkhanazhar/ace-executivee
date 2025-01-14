@@ -19,11 +19,12 @@ const ChauffeurServiceCard = ({
         {description.map((paragraph, index) => (
           <p
             key={index}
-            className="text-gray-700 dark:text-gray-400 mt-2 md:text-base text-sm"
+            className="text-gray-600 dark:text-gray-400 mt-2 md:text-base text-sm font-[500]"
           >
             {paragraph}
           </p>
         ))}
+
         <p className="text-gray-600 mt-4 dark:text-gray-400">
           Call us at{" "}
           <a

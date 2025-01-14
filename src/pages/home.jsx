@@ -13,7 +13,7 @@ import LocomotiveScroll from "locomotive-scroll";
 import CustomerReviews from "../components/Layouts/Home/Reviews";
 
 const HomePage = () => {
-  const locomotiveScroll = new LocomotiveScroll();
+  new LocomotiveScroll();
   const serviceData = {
     title: "Chauffeur Services in Birmingham",
     description: [
@@ -23,8 +23,7 @@ const HomePage = () => {
       "Renowned for punctuality, discretion, and exceptional local knowledge, our chauffeurs provide unparalleled service tailored to your needs. Travel in comfort and elegance.",
     ],
     phoneNumber: "07872 002283",
-    imageUrl:
-      "https://img.freepik.com/free-photo/businesswoman-getting-taxi-cab_23-2149236690.jpg?t=st=1735825305~exp=1735828905~hmac=32e277a19fea4e36715f9328861f335ac5c8985fc273c268bb2b1ecc68c97289&w=900",
+    imageUrl: "van-3.jpg",
   };
   const serviceData2 = {
     title: "Travel in Style and Comfort with Our 8-Seater Luxury Minibus",
@@ -37,8 +36,8 @@ const HomePage = () => {
       "✔ Competitive Rates",
       "✔ Comfortable and Spacious",
     ],
-    phoneNumber: ["07872 002283", "07507 133667"],
-    imageUrl: "busimage.jpeg",
+    phoneNumber: ["+44-7872002283", "+44-7872002283"],
+    imageUrl: "van.jpg",
   };
   const whyChooseUs = {
     title: "Why Choose ACE Executives",
@@ -77,7 +76,6 @@ const HomePage = () => {
       },
     ],
   };
-
   return (
     <div className="overflow-hidden dark:bg-gray-900">
       <Navbar />

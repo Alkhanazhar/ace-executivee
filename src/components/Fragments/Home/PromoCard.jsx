@@ -3,7 +3,7 @@ const PromoCard = () => {
   const data = [
     {
       title: "Welcome Discount",
-      code: "WELCOME10",
+      // code: "WELCOME10",
       description:
         "Get 10% off your first booking with our luxury minibus service.",
       imageUrl:
@@ -11,7 +11,7 @@ const PromoCard = () => {
     },
     {
       title: "Airport Special",
-      code: "AIRPORT20",
+      // code: "AIRPORT20",
       description:
         "Enjoy 20% off on airport transfers to Heathrow, Gatwick, or Manchester.",
       imageUrl:
@@ -19,21 +19,21 @@ const PromoCard = () => {
     },
     {
       title: "Family Getaway",
-      code: "FAMILY15",
+      // code: "FAMILY15",
       description: "Book your family holiday travel and save 15% on your trip.",
       imageUrl:
         "https://images.unsplash.com/photo-1540479859555-17af45c78602?w=300&h=200&fit=crop",
     },
     {
       title: "Corporate Saver",
-      code: "BIZ25",
+      // code: "BIZ25",
       description: "Save 25% on corporate bookings for group travel or events.",
       imageUrl:
         "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?w=300&h=200&auto=compress",
     },
     {
       title: "Special Occasion Offer",
-      code: "EVENT30",
+      // code: "EVENT30",
       description:
         "Make your special occasions extra memorable with 30% off luxury transport.",
       imageUrl:
@@ -41,7 +41,7 @@ const PromoCard = () => {
     },
     {
       title: "Loyalty Reward",
-      code: "LOYALTY50",
+      // code: "LOYALTY50",
       description:
         "Get 50% off your 5th trip as a token of appreciation for choosing us!",
       imageUrl:

@@ -1,7 +1,8 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-react";
 import { useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   const [hover, setHover] = useState(true);
@@ -14,13 +15,6 @@ export default function Hero() {
   const headingLength = heading.length / 2;
   const tl = gsap.timeline();
   useGSAP(() => {
-    tl.from(".eyebrow", {
-      opacity: 0,
-      y: 10,
-      stagger: 0.05,
-      duration: 0.4,
-      ease: "power2.out",
-    });
     tl.from(
       "h1 .a",
       {
@@ -43,6 +37,13 @@ export default function Hero() {
       },
       "anim"
     );
+    tl.from(".eyebrow", {
+      opacity: 0,
+      y: 50,
+      stagger: 0.05,
+      duration: 0.4,
+      ease: "power2.out",
+    });
     tl.from(".hero-para", {
       opacity: 0,
       stagger: -0.1,
@@ -65,7 +66,7 @@ export default function Hero() {
       </div>
 
       <div className="relative h-full flex items-center">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="overflow-hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className=" overflow-hidden  mb-2 text-sm eyebrow px-4 py-1 w-fit mx-auto rounded-full bg-gradient-to-b from-neutral-50 to-neutral-400 ">
             over 1400+ happy customers
           </h1>
@@ -131,18 +132,30 @@ export default function Hero() {
               }
             </p>
           </div>
-          <button
-            onMouseOver={handleMouseOver}
-            onMouseLeave={handleMouseOver}
-            className="bg-primaryColor text-white px-8 py-3 rounded-full font-semibold flex items-center mx-auto hover:bg-primaryColor/80 transition-colors"
-          >
-            Book Now
-            <ArrowRight
-              className={`h-5 w-5  duration-300 transition-all ${
-                hover ? "ml-2" : "ml-5"
-              }`}
-            />
-          </button>
+          {/* <Link to={"/contact"}>
+            <button
+              onMouseOver={handleMouseOver}
+              onMouseLeave={handleMouseOver}
+              className="bg-primaryColor text-white px-8 py-3 rounded-full font-semibold flex items-center mx-auto hover:bg-primaryColor/80 transition-colors"
+            >
+              Get in Touch
+              <ArrowRight
+                className={`h-5 w-5  duration-300 transition-all ${
+                  hover ? "ml-2" : "ml-5"
+                }`}
+              />
+            </button>
+          </Link> */}
+          <div>
+            <a
+              rel="noreferrer"
+              href="https://wa.me/+447872002283?text=Hello%20there!"
+              target="_blank"
+              className="w-fit bg-primaryColor text-white px-8 py-3 rounded-full font-semibold flex items-center mx-auto hover:bg-primaryColor/80 transition-colors"
+            >
+              Call Now <Phone size={16} className="ml-2" />
+            </a>
+          </div>
         </div>
       </div>
     </div>

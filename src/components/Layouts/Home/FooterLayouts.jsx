@@ -13,7 +13,7 @@ const FooterLayouts = () => {
         <div className="footer__group grid grid-cols-[repeat(auto-fit,minmax(160px,1fr))] items-start gap-12 lg:flex lg:justify-between lg:justify-items-center">
           <div className="footer__content">
             <h2 className="footer__content-title font-serif text-[20px] font-semibold text-black dark:text-white">
-              <Link to="/" className="footer__content-logo">
+              <Link to="/" className="footer__content-logo md:text-3xl">
                 {brandName}
               </Link>
             </h2>
@@ -58,14 +58,15 @@ const FooterLayouts = () => {
           </div>
 
           <div className="footer__content">
-            <h3 className="footer__content-title pb-4 font-serif text-[18px] font-semibold text-black dark:text-white">
+            {/* <h3 className="footer__content-title pb-4 font-serif text-[18px] font-semibold text-black dark:text-white">
               Socials
-            </h3>
+            </h3> */}
           </div>
         </div>
 
         <p className="footer__copy border-t-2 border-black dark:border-white pt-8 text-center text-[15px]text-black dark:text-white">
-          Copyrights {date.getFullYear()}
+          &copy; Copyrights {date.getFullYear()}Ace Executive Chauffeur
+          Services. All Rights Reserved.
         </p>
       </div>
     </footer>

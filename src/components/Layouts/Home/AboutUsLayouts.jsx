@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { urlStaticAboutImage } from "../../../utils/data";
 import { brandName } from "../../../utils/Constants";
 import { useState } from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-react";
 
 const AboutUsLayouts = () => {
   const [hover, setHover] = useState(true);
@@ -32,25 +32,19 @@ const AboutUsLayouts = () => {
             photos of minibuses and journeys, search for specific destinations,
             and ensure secure user accounts through authentication.
           </p>
-          <button
-            onMouseOver={handleMouseOver}
-            onMouseLeave={handleMouseOver}
-            className="ms-0 bg-primaryColor text-white px-8 py-3 rounded-full font-semibold flex items-center mx-auto hover:bg-primaryColor/80 transition-colors"
+          <a
+            rel="noreferrer"
+            href="https://wa.me/+447872002283?text=Hello%20there!"
+            target="_blank"
+            className="w-fit bg-primaryColor text-white px-8 py-3 rounded-full font-semibold flex items-center  hover:bg-primaryColor/80 transition-colors"
           >
-            Book Now
-            <ArrowRight
-              className={`h-5 w-5  duration-300 transition-all ${
-                hover ? "ml-2" : "ml-5"
-              }`}
-            />
-          </button>
+            Book Now <Phone size={16} className="ml-2" />
+          </a>
         </div>
 
         <img
           data-aos="fade-left"
-          src={
-            "https://img.freepik.com/free-photo/picture-two-young-businessmen-meeting-shaking-hands_176420-6256.jpg?t=st=1735835362~exp=1735838962~hmac=7b9785f3fa444c2d7f44ecc062e5ae3d15092c0c097c47011c66208a1117051f&w=900"
-          }
+          src={"van-2.jpg"}
           alt="about img"
           className="object-cover w-full about__img"
         />
