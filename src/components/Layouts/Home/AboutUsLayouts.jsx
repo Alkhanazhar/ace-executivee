@@ -1,8 +1,6 @@
-import { Link } from "react-router-dom";
-import { urlStaticAboutImage } from "../../../utils/data";
 import { brandName } from "../../../utils/Constants";
 import { useState } from "react";
-import { ArrowRight, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
 
 const AboutUsLayouts = () => {
   const [hover, setHover] = useState(true);
@@ -38,7 +36,7 @@ const AboutUsLayouts = () => {
             target="_blank"
             className="w-fit bg-primaryColor text-white px-8 py-3 rounded-full font-semibold flex items-center  hover:bg-primaryColor/80 transition-colors"
           >
-            Book Now <Phone size={16} className="ml-2" />
+            Call Now <Phone size={16} className="ml-2" />
           </a>
         </div>
 
