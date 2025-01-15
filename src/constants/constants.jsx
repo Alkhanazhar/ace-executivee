@@ -15,13 +15,13 @@ export const ctaCards = [
     title: "Manchester  Airport",
     description:
       "Expert airport transfer services to Heathrow Airport with guaranteed comfort and punctuality for every trip.",
-    src: "https://images.pexels.com/photos/30001160/pexels-photo-30001160/free-photo-of-commercial-airplane-parked-at-minas-gerais-airport.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    src: "suitcase-2.jpg",
   },
   {
     title: "Gatwick  Airport",
     description:
       "Enjoy seamless airport transfers to Gatwick Airport, tailored for your comfort and on-time arrival.",
-    src: "https://images.pexels.com/photos/1815385/pexels-photo-1815385.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    src: "suitcase-3.jpg",
   },
   {
     title: "Stansted  Airport",

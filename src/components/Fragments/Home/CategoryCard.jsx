@@ -18,15 +18,13 @@ const CategoryCard = () => {
     },
     {
       title: "Executive Group Transport",
-      imageUrl:
-        "https://img.freepik.com/free-photo/businesswoman-getting-taxi-cab_23-2149236753.jpg?t=st=1735824600~exp=1735828200~hmac=8ace271fe8271b447b696a701e33073608aee45942f4464aa2cfdd0fac8a4dc0&w=740", // Mercedes Sprinter business van
+      imageUrl: "suitcase-2.jpg",
       description:
         "Premium group transportation for executive teams and business delegates. Spacious, comfortable vehicles equipped with modern amenities for productive travel time.",
     },
     {
       title: "Door-to-Door Business Service",
-      imageUrl:
-        "https://images.unsplash.com/photo-1632276536839-84cad7fd03b0?w=300&h=200&fit=crop", // Business professional by luxury car
+      imageUrl: "suitcase.jpg",
       description:
         "Reliable door-to-door pickup service for business professionals. Seamless transportation from your location to meetings, conferences, or corporate events.",
     },
@@ -39,8 +37,7 @@ const CategoryCard = () => {
     },
     {
       title: "Premium Hourly Hire",
-      imageUrl:
-        "https://img.freepik.com/free-photo/businesswoman-getting-taxi-cab_23-2149236693.jpg?t=st=1735824674~exp=1735828274~hmac=5e39eb260524a3d98551c71f3c8d25b7a8a1a7edbbe297a2f7192eef06b47a2d&w=996", // Luxury business van
+      imageUrl: "suitcase-3.jpg", // Luxury business van
       description:
         "Flexible hourly and full-day hire services tailored to your business needs. Perfect for multiple meetings, roadshows, or extended corporate events with dedicated chauffeurs.",
     },

@@ -1,6 +1,50 @@
 /* eslint-disable react/prop-types */
 
+import { useState } from "react";
+
 const FormSection = () => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [formData, setFormData] = useState({
+    first_name: "",
+    last_name: "",
+    email: "@gmail.com",
+    phone_number: "",
+    number_of_persons: 0,
+    additional_pickups: "",
+    type_of_occasion: "",
+    pick_up_date: "",
+    pick_up_time: "",
+    starting_location: "",
+    starting_postal_code: "",
+    end_location: "",
+    end_postal_code: "",
+    return_same_day: "",
+    additional_comments: "",
+  });
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setIsLoading(true);
+    setError(null);
+
+    try {
+      const response = await axios.post(
+        "https://example.com/api/bookings",
+        formData
+      );
+
+      console.log("Booking successful:", response.data);
+      alert("Booking submitted successfully!");
+    } catch (err) {
+      const errorMessage =
+        err.response?.data?.message ||
+        "Failed to submit booking. Please try again.";
+      setError(errorMessage);
+    } finally {
+      setIsLoading(false);
+    }
+  };
   return (
     <div className="flex-1 rounded-lg bg-white shadow-md dark:bg-darkColor p-4 -mt-16 border dark:border-white/10 mb-14">
       <div>
