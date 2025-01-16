@@ -1,4 +1,4 @@
-const WhyChooseUs = ({ title, description, features=[] }) => {
+const WhyChooseUs = ({ title, description, features = [] }) => {
   return (
     <section className=" px-4 md:px-8">
       <div className="max-w-5xl mx-auto text-center">

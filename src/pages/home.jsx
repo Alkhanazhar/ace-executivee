@@ -22,7 +22,7 @@ const HomePage = () => {
 
       "Renowned for punctuality, discretion, and exceptional local knowledge, our chauffeurs provide unparalleled service tailored to your needs. Travel in comfort and elegance.",
     ],
-    phoneNumber: "07872 002283",
+    phoneNumber: "+44-7872002283",
     imageUrl: "van-3.jpg",
   };
   const serviceData2 = {

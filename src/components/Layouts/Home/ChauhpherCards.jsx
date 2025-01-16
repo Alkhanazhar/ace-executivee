@@ -29,7 +29,7 @@ const ChauffeurServiceCard = ({
           Call us at{" "}
           <a
             href={`tel:${phoneNumber}`}
-            className="text-gray-500 font-medium dark:text-gray-400"
+            className="text-blue-800 font-medium dark:text-blue-800"
           >
             {phoneNumber}
           </a>{" "}

@@ -11,7 +11,6 @@ const Form = () => {
         <div className="text-sm">CALL:+447872002283</div>
         {/* <div className="text-sm">EMAIL:</div> */}
       </div>
-
       <FormSection />
     </div>
   );
