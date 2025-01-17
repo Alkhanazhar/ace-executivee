@@ -22,7 +22,7 @@ const HomePage = () => {
 
       "Renowned for punctuality, discretion, and exceptional local knowledge, our chauffeurs provide unparalleled service tailored to your needs. Travel in comfort and elegance.",
     ],
-    phoneNumber: "+44-7872002283",
+    phoneNumber: "+447507133667",
     imageUrl: "van-3.jpg",
   };
   const serviceData2 = {
@@ -36,7 +36,7 @@ const HomePage = () => {
       "✔ Competitive Rates",
       "✔ Comfortable and Spacious",
     ],
-    phoneNumber: ["+44-7872002283", "+44-7872002283"],
+    phoneNumber: ["+447507133667", "+447507133667"],
     imageUrl: "van.jpg",
   };
   const whyChooseUs = {

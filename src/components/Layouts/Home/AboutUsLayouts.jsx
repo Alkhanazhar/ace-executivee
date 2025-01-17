@@ -32,7 +32,7 @@ const AboutUsLayouts = () => {
           </p>
           <a
             rel="noreferrer"
-            href="https://wa.me/+447872002283?text=Hello%20there!"
+            href="https://wa.me/+447507133667?text=Hello%20there!"
             target="_blank"
             className="w-fit bg-primaryColor text-white px-8 py-3 rounded-full font-semibold flex items-center  hover:bg-primaryColor/80 transition-colors"
           >

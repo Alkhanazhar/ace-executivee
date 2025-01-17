@@ -2,6 +2,7 @@
 
 import axios from "axios";
 import { useState } from "react";
+import toast from "react-hot-toast";
 
 const FormSection = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -20,7 +21,7 @@ const FormSection = () => {
     starting_postal_code: "",
     end_location: "",
     end_postal_code: "",
-    return_same_day: "no",
+    return_same_day: "Yes",
     return_date: "",
     return_pick_up_time: "",
     additional_comments: "",
@@ -50,11 +51,11 @@ const FormSection = () => {
       return "Starting Postal Code is required.";
     if (!end_location.trim()) return "End Location is required.";
     if (!end_postal_code.trim()) return "End Postal Code is required.";
-
     return null; // Return null if no errors
   };
-
+  // if(formData.)
   const handleSubmit = async (event) => {
+    const toastId = toast.loading("Processing...");
     event.preventDefault();
     const validationError = validateForm();
     if (validationError) {
@@ -63,21 +64,43 @@ const FormSection = () => {
     }
 
     setIsLoading(true);
-    setIsLoading(true);
     // setError(null);
 
     try {
       const response = await axios.post(
-        "http://127.0.0.1:8000/api/trip-plan",
+        "https://aceexecutivetransfer.uk/api/trip-plan",
         formData
       );
       console.log("Booking successful:", response.data);
-      alert("Booking submitted successfully!");
+      // alert("Booking submitted successfully!");
+      toast.success("We'll get in touch with you shortly!", { id: toastId });
+      setFormData({
+        first_name: "",
+        last_name: "",
+        email: "",
+        phone_number: "",
+        number_of_persons: 0,
+        additional_pickups: "",
+        type_of_occasion: "",
+        pick_up_date: "",
+        pick_up_time: "",
+        starting_location: "",
+        starting_postal_code: "",
+        end_location: "",
+        end_postal_code: "",
+        return_same_day: "Yes",
+        return_date: "",
+        return_pick_up_time: "",
+        additional_comments: "",
+      });
+      setError("");
     } catch (err) {
+      console.log(err);
       const errorMessage =
         err.response?.data?.message ||
         "Failed to submit booking. Please try again.";
       setError(errorMessage);
+      toast.error("Something went wrong!", { id: toastId });
     } finally {
       setIsLoading(false);
     }
@@ -85,6 +108,7 @@ const FormSection = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target; // Get name and value of the input
+
     setFormData((prevState) => ({
       ...prevState,
       [name]: value, // Update the specific field
@@ -279,13 +303,13 @@ const FormSection = () => {
               onChange={handleChange}
               className="w-full px-4 py-2 text-gray-700 bg-white border rounded-md focus:outline-none"
             >
-              <option value={""}>yes or no</option>
-              <option value={"yes"}>Yes</option>
-              <option value={"no"}>No</option>
+              <option value={"Yes"}>Yes</option>
+              <option value={"No Return"}>No Return</option>
+              <option value={"Another Day"}>Another Day</option>
             </select>
           </div>
         </div>
-        {formData.return_same_day == "no" && (
+        {formData.return_same_day == "Another Day" && (
           <div className="flex justify-between w-full gap-2">
             <div>
               <Label label={"Returning Date"} />
@@ -298,9 +322,15 @@ const FormSection = () => {
               />
             </div>
             <div>
-              <Label label={"Pick up Time"} />
+              <Label label={"Return Pick up Time"} />
               <div className="flex gap-2 items-center">
-                <Input placeholder="HH" type="number" />:
+                <Input
+                  name="return_pick_up_time"
+                  placeholder="HH"
+                  type="number"
+                  value={formData.return_pick_up_time}
+                  onChange={handleChange}
+                />
                 {/* <Input placeholder="MM" type="number" /> */}
               </div>
             </div>
@@ -322,10 +352,11 @@ const FormSection = () => {
           ></textarea>
         </div>
         <button
+          disabled={isLoading}
           onClick={handleSubmit}
           className="text-center w-full bg-primaryColor text-white px-4 py-3  text-sm rounded-lg font-semibold flex items-center mx-auto hover:bg-primaryColor/80 transition-colors"
         >
-          <span className="mx-auto">Submit</span>
+          <span className="mx-auto">{isLoading ? "Loading" : "Submit"}</span>
         </button>
       </div>
       <span className="text-red-500 text-sm my-2">{error}</span>

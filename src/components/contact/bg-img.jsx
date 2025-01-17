@@ -1,6 +1,6 @@
 const BgImage = () => {
   return (
-    <div className="h-[45vh] -z-[40]">
+    <div className="h-[50vh] -z-[40] ">
       <img
         src="van.jpg"
         alt="chauffer service"

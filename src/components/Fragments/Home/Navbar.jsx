@@ -102,7 +102,7 @@ const Navbar = () => {
           </div>
           <a
             rel="noreferrer"
-            href="https://wa.me/+447872002283?text=Hello%20there!"
+            href="https://wa.me/+447507133667?text=Hello%20there!"
             target="_blank"
             className="bg-primaryColor text-white px-4 py-2 text-sm rounded-full font-semibold flex items-center mx-auto hover:bg-primaryColor/80 transition-colors"
           >

@@ -4,7 +4,7 @@ import Navbar from "../components/Fragments/Home/Navbar";
 
 const Contact = () => {
   return (
-    <div className="dark:bg-gray-900 min-h-screen">
+    <div className="dark:bg-gray-900 min-h-screen ">
       <Navbar />
       <BgImage />
       <Form />
